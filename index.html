@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <label for="username">Username</label>
+    <br>
+    <input type="text" id="username">
+
+    <br><br>
+
+    <label for="password">Password</label>
+    <br>
+    <input type="text" id="password">
+
+    <br><br>
+    <label for="status">Status</label>
+    <br>
+    <select name="" id="status">
+        <option value="">-SELECT-</option>
+        <option value="Active">Active</option>
+        <option value="Deactive">Deactive</option>
+    </select>
+
+    
+    <br><br>
+    <button onclick="demo()">SEND</button>
+
+    <br><br><br>
+    <p id="Error"></p>
+
+
+
+</body>
+</html>
+
+
+<script>
+    function demo(){
+        let username = document.getElementById("username").value
+        let password = document.getElementById("password").value
+        let status   = document.getElementById("status").value
+        let Error   = document.getElementById("Error")
+
+        
+        let db_password = "123"
+        let db_status = "Active"
+
+        if(username === "Admin" && password === db_password  || status == db_status){
+            window.location.href = "http://www.w3schools.com";
+        }else{
+            Error.innerHTML = "Error"
+        }
+    }
+</script>
+
+
+
+
+
+<!-- 1) funksiyanin yaradilmasi
+2) inputlarin valuelerinin getirilmesi
+3) sertlerin verilmesi -->
+
+
+
